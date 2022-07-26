@@ -9,3 +9,13 @@ function getSum(num) {
 
 getSum(100);
 
+// task 2
+
+function ourCredit(ourSumCredit) {
+    const creditPercent = 0.17;
+    const creditYears = 5;
+    let creditOverPay = (ourSumCredit * creditPercent) * creditYears;
+    console.log(Math.floor(creditOverPay));
+}
+
+ourCredit(10000);
