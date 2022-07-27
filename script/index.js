@@ -19,3 +19,10 @@ function ourCredit(ourSumCredit) {
 }
 
 ourCredit(10000);
+
+// task 3
+function trimString(str,valueFrom, valueOn) {
+    return console.log(str.toString().slice(valueFrom,valueOn));
+}
+
+trimString('lorem ipsum dolar', 1,13);
