@@ -59,3 +59,20 @@ function getSum(a,b) {
 }
 
 getSum(2,2)
+
+// task 6
+
+// думал сначала запихнуть их в функцию , ну походу поправишь это задание
+let foo = function () {
+     return console.log('foo')
+}
+let boo = function () {
+    return console.log('boo')
+}
+// я так понял это задание, но если задавать в качестве параметра , то что мы даем этим функциям.
+function fooboo(check) {
+     if (check) return foo()
+    else return boo()
+}
+
+fooboo(false)
