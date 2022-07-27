@@ -86,3 +86,20 @@ function triangle(a, b, c) {
      // аналогично по теореме пифагора можно
 }
 triangle(5,8,10);
+
+ // task 2
+
+function chocolate(x, y) {
+    let chocolateBreaks = 0;
+    if (x === 0 || y === 0) return console.log('введите корректные данные')
+    else {
+        for (let i = 0; i < y; i++) {
+            for (let k = 1; k < x; k++) {
+                chocolateBreaks++;
+            }
+        }
+        console.log(chocolateBreaks);
+    }
+
+}
+chocolate(3,2)
