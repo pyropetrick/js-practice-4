@@ -26,3 +26,18 @@ function trimString(str,valueFrom, valueOn) {
 }
 
 trimString('lorem ipsum dolar', 1,13);
+
+// task 4
+ function getSumNumbers(value) {
+    value += '';
+    let sumNumbers = 0;
+    for (i of value) {
+        i = Number(i);
+        sumNumbers += i;
+    }
+    return console.log(sumNumbers)
+ }
+
+getSumNumbers(4222)
+
+// task 5
