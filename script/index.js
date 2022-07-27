@@ -41,3 +41,21 @@ trimString('lorem ipsum dolar', 1,13);
 getSumNumbers(4222)
 
 // task 5
+
+function getSum(a,b) {
+     let result = 0;
+     if (a === b) return console.log(`${a} Since both are same`);
+     else if (a > b) {
+         for ( b ; b <= a; b++) {
+             result += b;
+         }
+     }
+     else if (b > a) {
+         for ( a ; a <= b; a++) {
+             result += a;
+         }
+     }
+     console.log(result)
+}
+
+getSum(2,2)
