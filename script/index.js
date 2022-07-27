@@ -80,16 +80,16 @@ fooboo(false)
 // advanced lvl
 // task 1
 
-function triangle(a, b, c) {
+function triangleCreate(a, b, c) {
      if ((a + c > b) && (a + b > c) && (b + c > a)) return console.log('true');
      else return console.log('false');
      // аналогично по теореме пифагора можно
 }
-triangle(5,8,10);
+triangleCreate(5,8,10);
 
  // task 2
 
-function chocolate(x, y) {
+function chocolateBreak(x, y) {
     let chocolateBreaks = 0;
     if (x === 0 || y === 0) return console.log('введите корректные данные')
     else {
@@ -98,8 +98,56 @@ function chocolate(x, y) {
                 chocolateBreaks++;
             }
         }
-        console.log(chocolateBreaks);
+        return console.log(chocolateBreaks);
     }
 
 }
-chocolate(3,2)
+chocolateBreak(3,2)
+
+function buyPhones(ourMoney) {
+    let purchaseAmount = 0;
+    const taxPercent = 0.2;
+    // переменная с ценами на телефоны
+    const phones = [1000,580,420];
+    // переменная с ценами на акссесуары
+    const accsPhone = [20, 25, 5];
+    let amountPhone = 2;
+    let amountAccs = 3;
+    // функция для покупки
+    function purchase (amtPhones, amtAccs) {
+        for (let i = 0; i < amtPhones ;i++) {
+            if (ourMoney >= phones[i]) purchaseAmount += phones[i];
+            else {
+                amountPhone--
+                continue;
+            }
+            for (let k = 0; k < amtAccs; k++) {
+                if (ourMoney >= purchaseAmount) {
+                    purchaseAmount += accsPhone[k];
+                } else {
+                    amountAccs--
+                    break;
+                }
+
+            }
+        }
+    }
+    // функция для вычисления налога с покупки
+    function getTax () {
+        return purchaseAmount += (purchaseAmount * taxPercent)
+    }
+    // функция для сравнения сумм и выведения результатов покупок
+    function checkSum() {
+        if (purchaseAmount <= ourMoney) {
+            console.log(`С вас ${purchaseAmount}$, вы купили: ${amountPhone} телефон(а) и по ${amountAccs} акссесуара к ним`)
+
+        } else {
+            console.log(`вам не хватает ${purchaseAmount - ourMoney}$ на самый бюджетный вариант`);
+        }
+    }
+    purchase(amountPhone,amountAccs);
+    getTax(purchaseAmount);
+    checkSum()
+
+}
+buyPhones(800)
