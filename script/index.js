@@ -69,10 +69,20 @@ let foo = function () {
 let boo = function () {
     return console.log('boo')
 }
-// я так понял это задание, но если задавать в качестве параметра , то что мы даем этим функциям.
+// я так понял это задание, но если задавать в качестве параметра , как написано в hw , то что мы даем этим функциям.
 function fooboo(check) {
      if (check) return foo()
     else return boo()
 }
 
 fooboo(false)
+
+// advanced lvl
+// task 1
+
+function triangle(a, b, c) {
+     if ((a + c > b) && (a + b > c) && (b + c > a)) return console.log('true');
+     else return console.log('false');
+     // аналогично по теореме пифагора можно
+}
+triangle(5,8,10);
