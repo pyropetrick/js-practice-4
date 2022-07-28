@@ -31,7 +31,7 @@ trimString('lorem ipsum dolar', 1,13);
  function getSumNumbers(value) {
     value += '';
     let sumNumbers = 0;
-    for (i of value) {
+    for (let i of value) {
         i = Number(i);
         sumNumbers += i;
     }
@@ -62,20 +62,20 @@ getSum(2,2)
 
 // task 6
 
-// думал сначала запихнуть их в функцию , ну походу поправишь это задание
+
 let foo = function () {
-     return console.log('foo')
+     console.log('foo')
 }
 let boo = function () {
-    return console.log('boo')
+    console.log('boo')
 }
 // я так понял это задание, но если задавать в качестве параметра , как написано в hw , то что мы даем этим функциям.
-function fooboo(check) {
-     if (check) return foo()
-    else return boo()
+function fooboo(check, funcOne, funcTwo) {
+     if (check) return funcOne();
+    else return funcTwo();
 }
 
-fooboo(false)
+fooboo(false, foo,boo)
 
 // advanced lvl
 // task 1
@@ -91,14 +91,19 @@ triangleCreate(5,8,10);
 
 function chocolateBreak(x, y) {
     let chocolateBreaks = 0;
+    let yBreak = 0;
+    let xBreak = 0;
     if (x === 0 || y === 0) return console.log('введите корректные данные')
     else {
         for (let i = 0; i < y; i++) {
+            yBreak++;
+
             for (let k = 1; k < x; k++) {
-                chocolateBreaks++;
+                xBreak++
             }
         }
-        return console.log(chocolateBreaks);
+        chocolateBreaks = xBreak + (yBreak - 1);
+        console.log(chocolateBreaks);
     }
 
 }
